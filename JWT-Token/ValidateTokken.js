@@ -2,6 +2,8 @@
 const {accessToken_generated} = require('../JWT-Token/GenerateTokenFile');
 const jwt = require('jsonwebtoken')
 
+
+// Validate the token --
 function validateAccessToken(req , res) {
     const refreshToken = req.cookies.refreshToken;
     if(!refreshToken)
