@@ -6,7 +6,7 @@ async function authenticateUser(req,res,next){
       try {
         const user = await loginUser_Model(req.body);
         if (!user) {
-            return res.status(401).json({ message: "User Not Existed \n please Sign-Up" });
+            return res.status(403).json({ message: "User Not Existed \n please Sign-Up" });
         }
         next(); 
     } catch (err) {
