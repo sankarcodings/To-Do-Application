@@ -13,6 +13,14 @@ app.use(cookieParser())
 
 // User - Route
 app.use('/user' , userRouter);
+
+// Handling the Invalid endpoint
+app.use((req,res ) => {
+    res.status(404).json({
+        message : "Invalid Endpoint",
+        // validEndpoints : ['/user/***' , '/task/***']
+    })
+})
  
 module.exports = app;
 
