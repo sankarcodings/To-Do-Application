@@ -1,6 +1,7 @@
 
 const loginUser_Model = require('../Model/loginUserModel');
 
+// Authentication
 async function authenticateUser(req,res,next){
       try {
         const user = await loginUser_Model(req.body);
