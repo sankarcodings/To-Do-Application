@@ -1,4 +1,4 @@
-const dbModel = require('./UserModel/DbModel');
+const dbModel = require('../Database/DbModel');
 
 async function findUserModel(id) {
     try {

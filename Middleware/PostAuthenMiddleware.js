@@ -1,5 +1,5 @@
 
-const findUserModel = require('../Model/FindUserModel')
+const findUserModel = require('../Model/UserModel/FindUserModel')
 
 async function authenticatePostUser(req,res,next){
       try {

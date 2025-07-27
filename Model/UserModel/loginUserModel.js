@@ -1,6 +1,6 @@
 
-const { verifyBcryptPassWord , bcryptPassWord} = require('../Bcrypt-PWD/BcryptPassword');
-const dbModel = require('../Model/DbModel')
+const { verifyBcryptPassWord } = require('../../Bcrypt-PWD/BcryptPassword');
+const dbModel = require('../Database/DbModel')
 
 async function loginUser_Model(data){
     try{

@@ -14,6 +14,9 @@ app.use(cookieParser())
 // User - Route
 app.use('/user' , userRouter);
 
+// Task - Route
+// app.use('/task',taskRouter);
+
 // Handling the Invalid endpoint
 app.use((req,res ) => {
     res.status(404).json({

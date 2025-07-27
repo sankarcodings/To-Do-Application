@@ -1,5 +1,5 @@
-const dbModel = require('./DbModel');
-const {bcryptPassWord} = require('../Bcrypt-PWD/BcryptPassword')
+const dbModel = require('../Database/DbModel');
+const {bcryptPassWord} = require('../../Bcrypt-PWD/BcryptPassword')
 
 
 async function createPost(data) {

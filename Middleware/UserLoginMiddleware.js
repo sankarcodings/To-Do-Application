@@ -1,5 +1,5 @@
 
-const loginUser_Model = require('../Model/loginUserModel');
+const loginUser_Model = require('../Model/UserModel/loginUserModel');
 
 // Authentication
 async function authenticateUser(req,res,next){

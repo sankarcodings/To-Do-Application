@@ -1,6 +1,6 @@
 
 // const {getAllUser} = require('../Model/UserModel');
-const getUserById = require('../Model/FindUserModel')
+const getUserById = require('../Model/UserModel/FindUserModel')
 
 // function getAll_User(req, res) {
 //   const users = getAllUser();
@@ -12,15 +12,15 @@ async function getUserBy_Id(req,res){
     const id = req.params.id;
     console.log(id)
     const result = await getUserById(id);
-    
-    if(result){
+    console.log(result)
+    if(result.rowCount>0){
             res.status(200).json({
             message : "Data Fetched in Db",
             data : result.rows[0]
         })
     }
     else{
-        res.status(500).json({
+        res.status(404).json({
             message : "No Data Found --"
         })
     }

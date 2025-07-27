@@ -1,5 +1,5 @@
 
-const postModel = require('../Model/PostModel')
+const postModel = require('../../Model/UserModel/PostModel')
 async function postUser_Controller(req,res){
     const result = await postModel(req.body);
     if(result){
