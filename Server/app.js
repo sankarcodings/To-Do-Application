@@ -6,6 +6,7 @@ const taskRouter = require('../Route/taskRouter');
 const cookieParser = require('cookie-parser');
 
 
+
 // Parse
 app.use(express.json())
 // cookie - parser
@@ -15,7 +16,7 @@ app.use(cookieParser())
 app.use('/user' , userRouter);
 
 // Task - Route
-// app.use('/task',taskRouter);
+app.use('/task',taskRouter);
 
 // Handling the Invalid endpoint
 app.use((req,res ) => {
