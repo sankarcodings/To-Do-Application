@@ -1,6 +1,5 @@
 
-const {getUserBy_Id} = require('../Controller/UserController/getUserController')
-const {getAllUser} = require('../Controller/UserController/getUserController')
+const {getUserBy_Id , getAllUser} = require('../Controller/UserController/getUserController')
 
 const express = require('express');
 const router = express.Router();

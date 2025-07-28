@@ -1,5 +1,4 @@
-const {getAll_User} = require('../../Model/UserModel/FindUserModel');
-const {findUserBy_Id} = require('../../Model/UserModel/FindUserModel')
+const {getAll_User , findUserBy_Id} = require('../../Model/UserModel/FindUserModel');
 
 async function getAllUser(req, res) {
   try{
