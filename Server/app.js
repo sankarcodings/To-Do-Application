@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const userRouter = require('../Route/userRouter')
 const taskRouter = require('../Route/taskRouter');
+const adminRouter = require('../Route/adminRouter')
 const cookieParser = require('cookie-parser');
 
 
@@ -11,6 +12,9 @@ const cookieParser = require('cookie-parser');
 app.use(express.json())
 // cookie - parser
 app.use(cookieParser())
+
+// Admin - Router
+app.use('/admin' , adminRouter);
 
 // User - Route
 app.use('/user' , userRouter);

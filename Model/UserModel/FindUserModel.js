@@ -1,6 +1,6 @@
 const dbModel = require('../Database/DbModel');
 
-async function findUserModel(id) {
+async function findUserBy_Id(id) {
     try {
         const query = 'SELECT * FROM userTable WHERE userId = $1';
         const result = await dbModel.query(query, [id]);
@@ -10,4 +10,18 @@ async function findUserModel(id) {
         throw err; 
     }
 }
-module.exports = findUserModel;
+
+async function getAll_User() {
+    try {
+        const query = 'SELECT * FROM userTable';
+        const result = await dbModel.query(query);
+        console.log(result.rows)
+        return result || 0;
+    } catch (err) {
+        throw err; 
+    }
+}
+module.exports = {
+    findUserBy_Id,
+    getAll_User
+}
